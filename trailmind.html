@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrailMind — Case Study | Srihari B</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1224;--navy2:#111B35;--line:rgba(255,255,255,.1);--ink:#EEF1F8;--mute:#9AA5C0;--terra:#D9644A;--blue:#2F6FED}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Syne,Inter,sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.eyebrow{color:var(--terra);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+h2{font-size:clamp(32px,5vw,52px);margin-bottom:28px}
+p.lead{color:var(--mute);max-width:680px;font-size:18px}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:6px;align-items:center;padding:8px 10px;border-radius:999px;background:rgba(17,27,53,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);max-width:calc(100% - 24px);overflow-x:auto}
+nav a{text-decoration:none;font-size:13px;padding:7px 14px;border-radius:999px;color:var(--mute);white-space:nowrap}
+nav a:hover{color:var(--ink);background:rgba(255,255,255,.07)}
+nav a.cta{background:var(--terra);color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 0 60px;border:0}
+.ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:800 clamp(80px,19vw,260px)/1 Syne,sans-serif;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.09);white-space:nowrap;pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(44px,8vw,96px);margin:10px 0 22px}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.tags span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--mute)}
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--navy2);padding:16px 0}
+.track{display:flex;gap:48px;width:max-content;animation:m 28s linear infinite;font:700 22px Syne,sans-serif;color:var(--mute)}
+.track b{color:var(--terra);font-weight:700}
+@keyframes m{to{transform:translateX(-50%)}}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:40px}
+.meta div{border-top:1px solid var(--line);padding-top:14px}
+.meta small{display:block;color:var(--mute);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.proto{display:flex;flex-direction:column;align-items:center;gap:20px}
+.phone{width:min(100%,380px);aspect-ratio:9/19;background:#000;border-radius:44px;padding:10px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.5);position:relative}
+.phone iframe{width:100%;height:100%;border:0;border-radius:34px;background:var(--navy2)}
+.btn{display:inline-block;text-decoration:none;background:var(--terra);color:#fff;padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px}
+.btn.o{background:transparent;border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:36px 0}
+.stat{background:var(--navy2);border:1px solid var(--line);border-radius:20px;padding:24px}
+.stat b{display:block;font:700 44px Syne,sans-serif;color:var(--terra)}
+.stat span{color:var(--mute);font-size:14px}
+.rows{margin-top:24px}
+.row{display:grid;grid-template-columns:70px 1fr 1.6fr;gap:24px;padding:28px 0;border-top:1px solid var(--line);transition:padding .3s}
+.row:hover{padding-left:12px}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row .n{font:700 18px Syne,sans-serif;color:var(--terra)}
+.row h3{font-size:24px}
+.row p{color:var(--mute)}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:28px 0}
+.sw div{border-radius:16px;padding:60px 14px 14px;font-size:12px;border:1px solid var(--line)}
+.sw b{display:block;font-size:13px}
+.type{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.type div{background:var(--navy2);border:1px solid var(--line);border-radius:20px;padding:24px}
+.type big{display:block;font-size:44px;margin-bottom:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--mute);font-size:15px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-size:14px}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+@media(max-width:800px){.grid2,.type{grid-template-columns:1fr}.row{grid-template-columns:44px 1fr}.row p{grid-column:2}section{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><a href="#top">TrailMind</a><a href="#prototype">Prototype</a><a href="#research">Research</a><a href="#system">System</a><a href="#testing">Testing</a><a class="cta" href="https://www.behance.net/gallery/253641515/TrailMind-Designing-an-Intelligent-Travel-Companion" target="_blank" rel="noopener">Behance ↗</a></nav>
+
+<header class="hero" id="top">
+<div class="ghost" aria-hidden="true">TRAILMIND</div>
+<div class="wrap">
+<div class="eyebrow">Case Study · UI/UX Capstone</div>
+<h1>The trip stays<br><em>smart</em> after<br>you book it.</h1>
+<p class="lead">TrailMind is a mobile-first travel companion that turns scattered planning into a living itinerary — curated picks, a visible budget fit, and real-time updates in one calm place.</p>
+<div class="tags"><span>Research</span><span>Information Architecture</span><span>User Flows</span><span>Design System</span><span>Prototype</span><span>Usability Testing</span></div>
+</div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+<span>Discover <b>✦</b> Plan <b>✦</b> Travel <b>✦</b> Budget-fit <b>✦</b> Real-time <b>✦</b> Calm Wayfinder <b>✦</b></span>
+<span>Discover <b>✦</b> Plan <b>✦</b> Travel <b>✦</b> Budget-fit <b>✦</b> Real-time <b>✦</b> Calm Wayfinder <b>✦</b></span>
+</div></div>
+
+<section id="overview"><div class="wrap fade">
+<div class="eyebrow">01 — Overview</div>
+<h2>Planning a trip shouldn't need ten tabs.</h2>
+<p class="lead">Sarah, 34, a marketing manager from Chicago, loves travelling but jumps between disconnected apps to match plans to her budget. The result: stress, lost free time, and dulled excitement. Every screen was checked against a problem Sarah actually has.</p>
+<div class="meta">
+<div><small>Role</small>UX Researcher & UI Designer</div>
+<div><small>Platform</small>Mobile-first (375×812)</div>
+<div><small>Tools</small>Figma · Maze</div>
+<div><small>Output</small>40-screen prototype</div>
+</div>
+<div class="cards">
+<div class="card"><h3>Reduce the decision load</h3><p>2–3 strong recommendations instead of an unranked list of 50.</p></div>
+<div class="card"><h3>Progress is visible</h3><p>Always see how much of the trip is planned versus still open.</p></div>
+<div class="card"><h3>Real-time, not re-fetch</h3><p>Price, weather and booking changes push to the traveller.</p></div>
+<div class="card"><h3>Calm confidence</h3><p>Travel is stressful. The UI never adds to it visually.</p></div>
+</div>
+</div></section>
+
+<section id="prototype"><div class="wrap fade">
+<div class="grid2">
+<div>
+<div class="eyebrow">02 — Interactive prototype</div>
+<h2>Try it yourself.</h2>
+<p class="lead">Tap through onboarding, discovery, itinerary building and booking. The frame scales to fit your screen; on a phone, open the full prototype for the best experience.</p>
+<div class="links"><a class="btn" href="https://www.figma.com/proto/a9ixdUZiwLe0CprQbvox0z/TrailMind?node-id=3-276&p=f&viewport=182%2C387%2C0.03&t=T4Q97BmPuIE65X2Z-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A185&page-id=3%3A184" target="_blank" rel="noopener">Open full prototype ↗</a><a class="btn o" href="https://www.figma.com/design/a9ixdUZiwLe0CprQbvox0z/TrailMind" target="_blank" rel="noopener">Figma file</a></div>
+</div>
+<div class="proto"><div class="phone">
+<iframe title="TrailMind Figma prototype" loading="lazy" allowfullscreen src="https://embed.figma.com/proto/a9ixdUZiwLe0CprQbvox0z/TrailMind?node-id=3-276&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A185&page-id=3%3A184&embed-host=share&hide-ui=1"></iframe>
+</div></div>
+</div>
+</div></section>
+
+<section id="research"><div class="wrap fade">
+<div class="eyebrow">03 — Research</div>
+<h2>People don't need ideas. They need to close decisions.</h2>
+<p class="lead">A 33-response survey found patterns at scale; two interviews explained the why. Both pointed to the same gap: narrowing down to a stay and itinerary they can commit to.</p>
+<div class="stats">
+<div class="stat"><b>19/33</b><span>abandoned a trip over planning effort</span></div>
+<div class="stat"><b>4.2/5</b><span>importance of budget</span></div>
+<div class="stat"><b>25/33</b><span>track itineraries in a bare Notes app</span></div>
+<div class="stat"><b>28/33</b><span>plan primarily on their phone</span></div>
+</div>
+<div class="rows">
+<div class="row"><span class="n">01</span><h3>Competitive gap</h3><p>Across 11 products, none showed a clear budget-fit signal. AI planners are neutral but weak on booking; OTAs are the reverse. TrailMind sits in the open space between.</p></div>
+<div class="row"><span class="n">02</span><h3>Time sink</h3><p>"Building the itinerary" (14) edged out "Comparing prices" (12) as the biggest pain point.</p></div>
+<div class="row"><span class="n">03</span><h3>Conditional trust</h3><p>Interviewees stop trusting an AI plan the moment it feels rushed, unrealistic or off-budget — so every AI block stays editable.</p></div>
+</div>
+</div></section>
+
+<section id="flows"><div class="wrap fade">
+<div class="eyebrow">04 — Structure & flows</div>
+<h2>Two taps to what matters.</h2>
+<p class="lead">A shallow, tab-anchored structure: Home, Explore, My Trips (emphasised as the core value), Alerts and Profile.</p>
+<div class="rows">
+<div class="row"><span class="n">01</span><h3>Onboarding</h3><p>Preference setup is mandatory before first Home, so recommendations feel earned rather than generic.</p></div>
+<div class="row"><span class="n">02</span><h3>Discovery</h3><p>A budget-fit indicator sits on the card itself, before the detail page opens.</p></div>
+<div class="row"><span class="n">03</span><h3>Itinerary</h3><p>The AI draft is a starting point: reorder, swap, lock a day.</p></div>
+<div class="row"><span class="n">04</span><h3>Booking</h3><p>Price breakdown comes before payment method, so there's no surprise total.</p></div>
+<div class="row"><span class="n">05</span><h3>Live updates</h3><p>Alerts deep-link to the affected itinerary day, so changes are seen in context.</p></div>
+</div>
+</div></section>
+
+<section id="system"><div class="wrap fade">
+<div class="eyebrow">05 — Design system</div>
+<h2>Calm Wayfinder.</h2>
+<p class="lead">Generous whitespace, card-first layout, soft elevation, and one coral accent reserved for "go" moments. Built on tokens so a desktop surface is a re-map, not a redesign.</p>
+<div class="sw">
+<div style="background:#2F6FED"><b>Wayfarer Blue</b>#2F6FED</div>
+<div style="background:#1B4FC4"><b>Blue Dark</b>#1B4FC4</div>
+<div style="background:#FF7A59;color:#0F172A"><b>Sunset Coral</b>#FF7A59</div>
+<div style="background:#1FAA59"><b>Palm Green</b>#1FAA59</div>
+<div style="background:#F5A623;color:#0F172A"><b>Amber</b>#F5A623</div>
+<div style="background:#E5484D"><b>Rust Red</b>#E5484D</div>
+<div style="background:#0F172A"><b>Ink</b>#0F172A</div>
+<div style="background:#F8FAFC;color:#0F172A"><b>Surface</b>#F8FAFC</div>
+</div>
+<div class="type">
+<div><big style="font-family:Syne">Sora Aa</big><span style="color:var(--mute)">Headings & display. Geometric, modern, slightly rounded.</span></div>
+<div><big>Inter Aa</big><span style="color:var(--mute)">Body & UI, tabular figures for prices and times.</span></div>
+</div>
+<div class="cards">
+<div class="card"><h3>8pt grid</h3><p>375×812 frame, 4 columns, 16px margins. Cards 16px radius, sheets 24px.</p></div>
+<div class="card"><h3>Component library</h3><p>Variant-driven Figma components for actions, inputs, navigation, feedback and overlays.</p></div>
+<div class="card"><h3>Built to scale</h3><p>Bottom sheets become side panels and the tab bar becomes a sidebar on wider screens.</p></div>
+</div>
+</div></section>
+
+<section id="testing"><div class="wrap fade">
+<div class="eyebrow">06 — Usability testing</div>
+<h2>The flow I trusted worked. The one I ignored didn't.</h2>
+<div class="stats">
+<div class="stat"><b>9</b><span>participants, 12 test blocks (Maze)</span></div>
+<div class="stat"><b>3.9/5</b><span>average design rating</span></div>
+<div class="stat"><b>100%</b><span>best single-task success (Kyoto booking)</span></div>
+<div class="stat"><b>56%</b><span>completed both tasks</span></div>
+</div>
+<div class="grid2">
+<div class="card"><h3>Booking a trip: validated</h3><p>75% and 100% success across variants. A ~61% misclick rate says the primary CTA needs more visual weight on a couple of screens.</p></div>
+<div class="card"><h3>Past trip summary: broken</h3><p>0% and 28.6% success. The Past tab showed only a cover, name and rating, with no entry point to what was booked, spent or visited.</p></div>
+</div>
+</div></section>
+
+<section id="iterations"><div class="wrap fade">
+<div class="eyebrow">07 — Iterations</div>
+<h2>Gaps found while building.</h2>
+<div class="rows">
+<div class="row"><span class="n">01</span><h3>Flight & hotel detail</h3><p>Added detail and swap screens so users see exactly what they're committing to before checkout.</p></div>
+<div class="row"><span class="n">02</span><h3>Trip summary</h3><p>A single review screen between the itinerary and booking summary.</p></div>
+<div class="row"><span class="n">03</span><h3>Home redundancy</h3><p>Alerts appeared in three places. The header icon became Saved, and quick actions became New Trip and Continue Itinerary.</p></div>
+<div class="row"><span class="n">04</span><h3>Dead ends removed</h3><p>Built Add Activity, Edit Profile and Change Password; added search to the filter sheet.</p></div>
+</div>
+</div></section>
+
+<section id="next"><div class="wrap fade">
+<div class="eyebrow">08 — Next steps</div>
+<h2>What I'd do next.</h2>
+<div class="cards">
+<div class="card"><h3>Fix summary discoverability</h3><p>Add "View summary" to every Past trip card; rebuild around photos, spend, places and rating.</p></div>
+<div class="card"><h3>Strengthen booking CTAs</h3><p>Raise visual dominance to cut misclicks.</p></div>
+<div class="card"><h3>Restaurant suggestions</h3><p>Requested in both interviews and testing.</p></div>
+<div class="card"><h3>Re-test</h3><p>Focused Maze study on My Trips → Past → Summary.</p></div>
+</div>
+<div class="links">
+<a class="btn" href="https://www.behance.net/gallery/253641515/TrailMind-Designing-an-Intelligent-Travel-Companion" target="_blank" rel="noopener">Behance case study ↗</a>
+<a class="btn o" href="https://app.maze.co/report/TrailMind-Usability-Testing/1o4g7ms8pca14" target="_blank" rel="noopener">Maze report ↗</a>
+<a class="btn o" href="https://www.figma.com/design/a9ixdUZiwLe0CprQbvox0z/TrailMind" target="_blank" rel="noopener">Figma design ↗</a>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Srihari B · UI/UX Designer · <a href="https://srihari67.github.io/Srihari-Portfolio">← Back to portfolio</a></div></footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
