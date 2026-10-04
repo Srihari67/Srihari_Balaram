@@ -68,7 +68,10 @@ td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);font-size:13.5px
 td:first-child{font-weight:600;color:var(--navy);width:16%}td:nth-child(3){width:34%;color:var(--muted)}
 .note{margin-top:28px;background:var(--navy);color:var(--bg);border-radius:14px;padding:24px 26px;font-size:14px}
 .note b{color:var(--y)}
-footer{padding:32px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+footer{padding:32px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--text,#fff)}
 .fu{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.fu.v{opacity:1;transform:none}
 @media(min-width:601px) and (max-width:1100px){.sg{grid-template-columns:repeat(2,minmax(0,375px))}}
 @media(max-width:900px){.hi,.g2,.cards,.spatial,.spatial[style]{grid-template-columns:1fr!important}.sec{padding:72px 20px}.sg{grid-template-columns:minmax(0,375px)}.hphones{max-width:380px;margin:0 auto}.meta{grid-template-columns:1fr 1fr 1fr}}
@@ -142,7 +145,15 @@ footer{padding:32px 24px;display:flex;justify-content:space-between;flex-wrap:wr
 <section class="sec"><div class="fu"><div class="eb">Conclusion</div><h2>Replacing uncertainty with <em>experience.</em></h2>
 <p class="lead">By letting users place a vehicle in their own environment and explore a 3D showroom at human scale, the platform swaps doubt for direct evaluation. That should reduce hesitation and improve conversion for the group vehicles, SUVs and buses, where size and fit matter most.</p></div></section>
 
-<footer><span>© 2026 Srihari B — UI/UX Designer, Palakkad</span><a href="work.html" target="_blank" rel="noopener">← Back to work</a><a href="https://www.linkedin.com/in/srihari-balaram">LinkedIn</a><a href="https://www.behance.net/sriharibalaramb">Behance</a><a href="assets/Srihari_B_UIUXDesigner_Resume.pdf" target="_blank">Resume</a></footer>
+<footer>
+  <span>© 2026 Srihari B — UI/UX Designer, Palakkad</span>
+  <div class="footer-links">
+    <a href="work.html" target="_blank" rel="noopener">← Back to work</a>
+    <a href="https://www.linkedin.com/in/srihari-balaram">LinkedIn</a>
+    <a href="https://www.behance.net/sriharibalaramb">Behance</a>
+    <a href="assets/Srihari_B_UIUXDesigner_Resume.pdf" target="_blank">Resume</a>
+  </div>
+</footer>
 <script>
 try{const o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');o.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.fu').forEach(el=>o.observe(el))}catch(e){document.querySelectorAll('.fu').forEach(el=>el.classList.add('v'))}
 </script></body></html>
