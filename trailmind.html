@@ -63,7 +63,11 @@ nav a.cta{background:var(--terra);color:#fff}
 .card h3{font-size:20px;margin-bottom:10px}
 .card p{color:var(--mute);font-size:15px}
 .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-size:14px}
+footer{border-top:1px solid var(--line);padding:40px 24px;color:var(--mute);font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:nowrap}
+footer > span{white-space:nowrap}
+.footer-links{display:flex;gap:24px;white-space:nowrap}
+.footer-links a{color:var(--mute);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--ink)}
 .fade{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
 .fade.in{opacity:1;transform:none}
 @media(max-width:800px){.grid2,.type{grid-template-columns:1fr}.row{grid-template-columns:44px 1fr}.row p{grid-column:2}section{padding:72px 0}}
