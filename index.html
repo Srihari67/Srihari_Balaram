@@ -623,6 +623,15 @@
     transition: transform 0.3s;
   }
   .project-row:hover .project-preview { transform: scale(1.02); }
+  .project-preview img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* show the whole cover, never crop */
+    object-position: center;
+    display: block;
+  }
   .project-preview-label {
     position: relative; z-index: 1;
     mix-blend-mode: overlay;
