@@ -217,8 +217,16 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-si
 </div>
 </div></section>
 
-<footer><div class="wrap">© 2026 Srihari B · UI/UX Designer · <a href="https://srihari67.github.io/Srihari-Portfolio">← Back to portfolio</a></div></footer>
-
+<footer>
+  <span>© 2026 Srihari B — UI/UX Designer, Palakkad</span>
+  <div class="footer-links">
+    <a href="work.html" target="_blank" rel="noopener">← Back to work</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Behance</a>
+    <a href="assets/Srihari_B_UIUXDesigner_Resume.pdf" target="_blank">Resume</a>
+  </div>
+</footer>
+  
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.fade').forEach(el=>io.observe(el));
