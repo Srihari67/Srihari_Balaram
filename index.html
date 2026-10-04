@@ -623,15 +623,6 @@
     transition: transform 0.3s;
   }
   .project-row:hover .project-preview { transform: scale(1.02); }
-  .project-preview img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;      /* show the whole cover, never crop */
-    object-position: center;
-    display: block;
-  }
   .project-preview-label {
     position: relative; z-index: 1;
     mix-blend-mode: overlay;
@@ -908,7 +899,7 @@
     <div class="hero-center">
   <div class="hero-photo-wrap">
     <img
-      src="assets/Srihari-Portfoliohero.png"
+      src="C:\Users\Srihari\Downloads\bg removed pic.png"
       alt="Srihari B"
       class="hero-photo"
     >
@@ -1003,12 +994,12 @@
         </p>
       </div>
       <div class="project-preview preview-trailmind">
-        <img src="assets/TrailMind-cover.png" alt="TrailMind project cover" onerror="this.style.display='none'">
+        <span class="project-preview-label">TRAILMIND · TRAVEL</span>
       </div>
     </a>
 
     <!-- Project 2 -->
-	<a href="malligai-ux-research-study.html" class="project-row fade-up">
+	<a href="malligai-ux-research.html" class="project-row fade-up">
       <div class="project-num">02</div>
       <div class="project-info">
         <div class="project-tags">
@@ -1021,9 +1012,9 @@
           In-depth UX research study exploring user behaviour in fashion discovery apps,
           identifying pain points across the browsing and checkout experience.
         </p>
-	  </div>
+      </div>
       <div class="project-preview preview-fashio">
-        <img src="assets/Malligai-ux-cover.png" alt="Malligai UX research study cover" onerror="this.style.display='none'">
+        <span class="project-preview-label">MALLIGAI · RESEARCH</span>
       </div>
 	</a>
 
@@ -1043,7 +1034,7 @@
         </p>
       </div>
       <div class="project-preview preview-malligai">
-        <img src="assets/Sustainable-Malligai-cover.png" alt="Sustainable Malligai project cover" onerror="this.style.display='none'">
+        <span class="project-preview-label">MALLIGAI · FASHION</span>
       </div>
     </a>
   </div>
