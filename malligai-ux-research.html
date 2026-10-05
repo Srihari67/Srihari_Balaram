@@ -100,7 +100,10 @@ td.me,th.me{background:rgba(217,105,74,.12)}
 .cols p,.cols li{color:var(--mute)}
 .cols ul{padding-left:18px}.cols li::marker{color:var(--terra)}
 footer{padding:56px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer{padding:32px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--text,#fff)}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
 .rv.in{opacity:1;transform:none}
 @media(max-width:600px){.bar{grid-template-columns:110px 1fr 44px}.empathy{grid-template-columns:1fr}nav b{display:none}}
@@ -273,7 +276,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <h3 style="margin-top:22px">Sustainability angle</h3><p>The design cuts unnecessary browsing and encourages intentional purchases, supporting more sustainable fashion consumption.</p></div>
 </div></div></section>
 
-<footer><div class="wrap"><span>Case study by Srihari B</span><a href="work.html">Back to work</a><a href="https://www.linkedin.com/in/srihari-balaram">LinkedIn</a><a href="https://www.behance.net/sriharibalaramb">Behance</a><a href="assets/Srihari_B_UIUXDesigner_Resume.pdf" target="_blank">Resume</a></div></footer>
+<footer>
+  <span>© 2026 Srihari B — UI/UX Designer, Palakkad</span>
+  <div class="footer-links">
+    <a href="work.html" target="_blank" rel="noopener">← Back to work</a>
+    <a href="https://www.linkedin.com/in/srihari-balaram">LinkedIn</a>
+    <a href="https://www.behance.net/sriharibalaramb">Behance</a>
+    <a href="assets/Srihari_B_UIUXDesigner_Resume.pdf" target="_blank">Resume</a>
+  </div>
+</footer>
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
